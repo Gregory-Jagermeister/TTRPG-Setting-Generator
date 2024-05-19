@@ -1,0 +1,347 @@
+import random
+from src.Modules.Settlement.Settlement import Settlement
+
+class TradingPost(Settlement):
+    def __init__(self):
+        """
+        Initializes a new instance of the TradingPost class.
+        """
+        super().__init__()
+
+        self.type = "Trading Post"
+        self.name = self.generate_name()
+        self.origin = "unknown"
+        self.specialty = "unknown"
+        self.vistor_traffic = "unknown"
+        self.resident_population = "unknown"
+        self.demographics = "unknown"
+        self.disposition = "unknown"
+        self.law_enforcement = "unknown"
+        self.leadership = "unknown"
+        self.population_wealth = "unknown"
+        self.crime = "unknown"
+        self.shop_num = 0
+        self.shops = "unknown"
+        self.service_num = 0
+        self.services = "unknown"
+
+    def generate(self):
+        self.origin = self.gen_origin()
+        self.specialty = self.gen_specialty()
+        self.age = self.generate_age()
+        self.condition = self.generate_condition()
+        self.vistor_traffic = self.gen_traffic()
+        self.size = self.generate_size()
+        self.environment = self.generate_environment()
+        self.resident_population = self.gen_population()
+        self.demographics = self.gen_demographics()
+        self.disposition = self.gen_disposition()
+        self.law_enforcement = self.gen_law_enforcement()
+        self.leadership = self.gen_leadership()
+        self.population_wealth = self.gen_pop_wealth()
+        self.crime = self.gen_crime()
+        self.shop_num = self.gen_shop_num()
+        self.shops = self.gen_shops(self.shop_num)
+        self.service_num = self.gen_service_num()
+        self.services = self.gen_services(self.service_num)
+        return self
+
+    def get_origin(self):
+        return self.origin
+
+    def gen_origin(self):
+        return random.choice(["Accidental", "Business Venture", "Crossroads", "Military outpost", "No Man's Land", "Native", "Overnight Stop", "Wilderness Expert"])
+
+    def get_specialty(self):
+        return self.specialty
+
+    def gen_specialty(self):
+        unscrupulous_contractors = random.choice(['Brutes & Brawlers', 'Cloak & Dagger', 'Bows & Slings', 'Scribes & Clerks', 'Guides & Trackers', 'Caravan & Mount', 'Arcane Academics', 'Magic Mercenaries', 'Priestly Guidance', 'Hands of the Divine'])
+        return random.choice(['Atypical Shipping Methods', 'Excellent and Unique Food', 'Various High Quality Beverages', 'Hospitality', 'Information', 'Purchasing Connections', f'Unscrupulous Contractors ({unscrupulous_contractors})'])
+
+    def get_traffic(self):      
+        return self.vistor_traffic
+
+    def gen_traffic(self):
+        roll = max(min(random.randint(0, 20) + self.modifiers.visitor_traffic_modifier, 20), 1)
+        
+        traffic_ranges = [
+            (range(0,2), (0, 2, "Vacant")),
+            (range(3, 6), (1, 1, "Groups")),
+            (range(7, 14), (2, 0, "Crowds")),
+            (range(15, 18), (3, -1, "Droves")),
+            (range(19, 21), (4, -2, "Masses")),
+        ]
+        
+        for traffic_range, traffic_info in traffic_ranges:
+            if roll in traffic_range:
+                size_mod, crime_mod, description = traffic_info
+                self.modifiers.size_modifier += size_mod
+                self.modifiers.crime_modifier += crime_mod
+                return description
+        return "Groups"
+
+    def gen_population(self):
+        roll = random.randint(0, 20)
+        population_ranges = [
+            (range(0,2), (2, "Nearly Deserted (Empty Houses and businesses litter this place)")),
+            (range(3, 6), (1, "Sparse (some of the places here are empty)")),
+            (range(7, 14), (0, "Appropiate (Both Homes and businesses are comfortably populated)")),
+            (range(15, 18), (-1, "Congested (The places here are often at capacity)")),
+            (range(19, 21), (-2 , "Overwhelmed (there are too many people for the amount of structures here)")),
+        ]
+        for population_range, population_info in population_ranges:
+            if roll in population_range:
+                crime_modifier, description = population_info
+                self.modifiers.crime_modifier += crime_modifier
+                return description
+
+    def gen_demographics(self):
+        roll = random.randint(0, 20)
+        demographics_ranges = [
+            (range(0, 5), "100% Primary Race"),
+            (range(6, 10), "60% Primary Race + 40% Secondary Race"),
+            (range(10, 14), "50% Primary Race + 25% Secondary Race + 15% tertiary Race + 10% Other Races"),
+            (range(15, 17), "20% Primary Race + all other Races in varieties"),
+            (range(18, 19), "80% Primary Race + 20% Secondary Race"),
+            (range(20, 21), "No Racial Representation, Ever shifting") 
+        ]
+        for demographics_range, demographics_info in demographics_ranges:
+            if roll in demographics_range:
+                print(demographics_info)
+                return demographics_info
+        return "100% Primary Race"
+    
+    def gen_disposition(self):
+        roll = random.randint(0, 20)
+        disposition_ranges = [
+            (range(0, 2), "Hostile"),
+            (range(3, 6), "Neutral"),
+            (range(7, 14), "Unfriendly"),
+            (range(15, 18), "Friendly"),
+            (range(19, 21), "Open")
+        ]
+        for disposition_range, disposition_info in disposition_ranges:
+            if roll in disposition_range:
+                return disposition_info
+        return "Neutral"
+
+    def gen_law_enforcement(self):
+        roll = random.randint(0, 20)
+        law_enforcement_ranges = [
+            (range(0, 2), "Non-Existant"),
+            (range(3, 6), "Sheiff"),
+            (range(7, 14), "Small Local Watch"),
+            (range(15, 18), "Well-Equpped"),
+            (range(19, 21), "Overwhelming Precsence")
+        ]
+        for law_enforcement_range, law_enforcement_info in law_enforcement_ranges:
+            if roll in law_enforcement_range:
+                return law_enforcement_info
+        return "Small Local Watch"
+
+    def gen_leadership(self):
+        roll = random.randint(0, 20)
+        leadership_ranges = [
+            (range(0, 1), "No Leadership"),
+            (range(2, 4), "Hereditary"),
+            (range(5, 7), "Merchant Monarch"),
+            (range(8, 10), "Underworld/Criminal Enterprise"),
+            (range(11, 13), f"Oligarchy Run by {random.choice(['Merchants (plutocracy)', 'Mages (Magocracy)', 'Priests (Theocracy)', 'A small group of people'])}"),
+            (range(14, 16), "Local Council"),
+            (range(17, 19), "Single Elected Leader"),
+            (range(20, 21), "Anarcho-Syndicalist Commune")
+        ]
+        for leadership_range, leadership_info in leadership_ranges:
+            if roll in leadership_range:
+                print(leadership_info)
+                return leadership_info
+        return "No Leadership"
+
+    def gen_pop_wealth(self):
+        roll = max(min(random.randint(0, 20) + self.modifiers.population_wealth_modifier, 20), 1)
+        pop_wealth_ranges = [
+            (range(0, 2), (-4, -2, "Destitute")),
+            (range(3, 6), (-2, -1, "Impoverished")),
+            (range(7, 14), (0, 0, "Average")),
+            (range(15, 17), (-1, 0, "Prosperous")),
+            (range(18, 19), (-2, 2, "Wealthy")),
+            (range(20, 21), (-4, 3, "Affluent"))
+        ]
+        for pop_wealth_range, pop_wealth_info in pop_wealth_ranges:
+            if roll in pop_wealth_range:
+                crime_modifier, quality_modifier, description = pop_wealth_info
+                self.modifiers.crime_modifier += crime_modifier
+                self.modifiers.quality_modifier += quality_modifier
+                return description
+        return "Average"
+
+    def gen_crime(self):
+        roll = max(min(random.randint(0, 20) + self.modifiers.crime_modifier, 20), 1)
+        crime_ranges = [
+            (range(0, 2), (4, "Regular")),
+            (range(3, 6), (3, "Common")),
+            (range(7, 14), (2, "Average")),
+            (range(15, 18), (1, "Uncommon")),
+            (range(19, 21), (0, "Rare"))
+        ]
+        for crime_range, crime_info in crime_ranges:
+            if roll in crime_range:
+                urban_modifier, description = crime_info
+                self.modifiers.urban_encounter_modifier += urban_modifier
+                return description
+        return "Average"
+
+    def gen_shop_num(self):
+        roll = 0
+        if self.size == "Very Small (20 standing structures)":
+            roll += random.randint(1, 8) + 2
+        elif self.size == "Small (40 standing structures)":
+            roll += random.randint(1, 8) + 4
+        elif self.size == "Medium (60 standing structures)":
+            roll += random.randint(1, 8) + 6
+        elif self.size == "Large (80 standing structures)":
+            roll += random.randint(1, 8) + 8
+        else:
+            roll += random.randint(1, 8) + 10
+        return roll
+    
+    def gen_shops(self, num):
+        shop_list = [
+            (range(0, 4), "Baker"),
+            (range(5, 8), "Butcher"),
+            (range(9, 12), "Cooper"),
+            (range(13, 16), "Carpenter"),
+            (range(17, 24), "General Store"),
+            (range(25, 28), "Herbalist"),
+            (range(29, 36), "Smithy"),
+            (range(37, 40), "Tailor"),
+            (range(41, 44), "Tanner/Taxidermist"),
+            (range(45, 48), "Thatcher"),
+            (range(49, 52), "Wainwright"),
+            (range(53, 56), "Weaver"),
+            (range(57, 59), "Alchemist"),
+            (range(60, 62), "Artist"),
+            (range(63, 65), "Bank & Exchange"),
+            (range(66, 68), "Cobbler"),
+            (range(69, 71), "Foundry"),
+            (range(72, 74), "Mill"),
+            (range(75, 77), "Textile Productor"),
+            (range(78, 80), "Shipwright"),
+            (range(81, 82), "Rare Botanicals"),
+            (range(83, 84), "Luxury Furnisher"),
+            (range(85, 86), "Rare Libations & Fare"),
+            (range(87, 88), "Rare Trade Goods"),
+            (range(89, 90), "Magic Shop - Armour"),
+            (range(91, 92), "Magic Shop - Books"),
+            (range(93, 94), "Magic Shop - Clothing"),
+            (range(95, 96), "Magic Shop - Jewelry"),
+            (range(97, 98), "Magic Shop - Weapons"),
+            (range(99, 101), "Magic Shop - Miscellaneous & Curiosities")
+        ]
+        shops = ["General Store"]
+        for i in range(num):
+            roll = random.randint(1, 100)
+            for shop_range, shop_info in shop_list:
+                if roll in shop_range:
+                    shops.append(shop_info +" ("+ self.gen_quality() + ")")
+        return shops
+
+    def gen_service_num(self):
+        roll = 0
+        if self.size == "Very Small (20 standing structures)":
+            roll += random.randint(1, 6)
+        elif self.size == "Small (40 standing structures)":
+            roll += random.randint(1, 6) + 1
+        elif self.size == "Medium (60 standing structures)":
+            roll += random.randint(1, 6) + 3
+        elif self.size == "Large (80 standing structures)":
+            roll += random.randint(1, 6) + 5
+        else:
+            roll += random.randint(1, 6) + 7
+        return roll
+
+    def hired_help_size(self):
+        roll = random.randint(1, 12)
+        help_size_ranges = [
+            (range(0, 6), ("Indiviual Person")),
+            (range(7, 10), ("Team")),
+            (range(11, 12), ("Guild")),
+        ]
+        for help_size_range, help_size_info in help_size_ranges:
+            if roll in help_size_range:
+                return help_size_info
+            
+    def gen_quality(self):
+        roll = random.randint(1, 12)
+        quality_ranges = [
+            (range(0, 4), ("Poor")),
+            (range(5, 10), ("Good")),
+            (range(11, 12), ("Fine")),
+        ]
+        for quality_range, quality_info in quality_ranges:
+            if roll in quality_range:
+                return quality_info
+        return "Good"
+
+    def gen_services(self, num):
+        service_list = [
+            (range(0, 8), "Barber"),
+            (range(9, 16), "Bathhouse"),
+            (range(17, 24), "Doctor/Apothecary"),
+            (range(25, 32), "Leisure House"),
+            (range(33, 44), "Inn"),
+            (range(45, 52), "Club"),
+            (range(53, 60), "Soothsayer"),
+            (range(61, 68), "Stable"),
+            (range(69, 80), "Tavern"),
+            (range(81, 82), f"Hired Help - Brutes and Brawlers.{self.hired_help_size()}"),
+            (range(83, 84), f"Hired Help - Cloak and Dagger.{self.hired_help_size()}"),
+            (range(85, 86), f"Hired Help - Bows and SLings.{self.hired_help_size()}"),
+            (range(87, 88), f"Hired Help - Scribes and Clerks.{self.hired_help_size()}"),
+            (range(89, 90), f"Hired Help - Guides and Trackers.{self.hired_help_size()}"),
+            (range(91, 92), f"Hired Help - Caravan and Mounts.{self.hired_help_size()}"),
+            (range(93, 94), f"Hired Help - Arcane Academics.{self.hired_help_size()}"),   
+            (range(95, 96), f"Hired Help - Magic Mercenaries.{self.hired_help_size()}"),
+            (range(97, 98), f"Hired Help - Priestly Guidance.{self.hired_help_size()}"),
+            (range(99, 101), f"Hired Help - Hands of the Divine. (Divine Healers){self.hired_help_size()}")
+        ]
+        services = ["Inn"]
+        for i in range(num):
+            roll = random.randint(1, 100)
+            for service_range, service_info in service_list:
+                if roll in service_range:
+                    services.append(service_info)
+        return services
+    
+    def format_list_as_table(self, list_items):
+        """Helper function that formats a list of items as a table with bullet points"""
+        items_str = ""
+        for i, item in enumerate(list_items, start=1):
+            items_str += f"  {i}. {item}\n"
+        return items_str.strip()  # Remove the last newline
+
+    
+    def __str__(self):
+        properties = [
+            f"Name: {self.name}",
+            f"Type: {self.type}",
+            f"Origin: {self.origin}",
+            f"Specialty: {self.specialty}",
+            f"Visitor Traffic: {self.vistor_traffic}",
+            f"Resident Population: {self.resident_population}",
+            f"Demographics: {self.demographics}",
+            f"Disposition: {self.disposition}",
+            f"Law Enforcement: {self.law_enforcement}",
+            f"Leadership: {self.leadership}",
+            f"Population Wealth: {self.population_wealth}",
+            f"Crime: {self.crime}",
+            f"Shop Number: {self.shop_num}",
+            "Shops:",
+            self.format_list_as_table(self.shops),
+            f"Service Number: {self.service_num}",
+            "Services:",
+            self.format_list_as_table(self.services)
+        ]
+        # Combine all properties into the final string representation
+        return "\n".join(properties)

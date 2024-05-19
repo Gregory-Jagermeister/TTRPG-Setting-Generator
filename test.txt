@@ -1,0 +1,29 @@
+Name: Snourraghamlleydor
+Type: Trading Post
+Origin: Business Venture
+Specialty: Excellent and Unique Food
+Visitor Traffic: Groups
+Resident Population: Appropiate (Both Homes and businesses are comfortably populated)
+Demographics: No Racial Representation, Ever shifting
+Disposition: Hostile
+Law Enforcement: Small Local Watch
+Leadership: Local Council
+Population Wealth: Average
+Crime: Rare
+Shop Number: 13
+Shops:
+1. General Store
+  2. Herbalist (Good)
+  3. Magic Shop - Jewelry (Poor)
+  4. Butcher (Good)
+  5. Foundry (Good)
+  6. Butcher (Poor)
+  7. Magic Shop - Miscellaneous & Curiosities (Good)
+Service Number: 5
+Services:
+1. Inn
+  2. Inn
+  3. Bathhouse
+  4. Club
+  5. Tavern
+  6. Leisure House

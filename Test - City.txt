@@ -1,0 +1,73 @@
+City of Traght Milvereek
+Origin: ['Prison: This place started as a colony for exiles or prisoners. Over time, it transitioned into a recognized city, possibly because of a successful uprising or because the controlling power was overthrown or altered its stance towards the colony.']
+Stewardship: Passing. The city’s fundamental elements are taken care of to a serviceable degree, though an inequality of attention is noticeable, and some areas seem to take priority over others. It could be that resources are not plentiful enough to cover everything, but those in charge are doing the best they can.
+Fortification: Lightly Fortified. Basic fortifications provide minimal obstacle for enemies but deter wild animals. A simple gate can be barred in the evenings.
+
+City Outskirts:
+
+Market Square: The Market Square is of a Ample size. The rules of running a stall comes in the form of a Bid.
+Merchant Overflow: Unpatrolled: Extra vendors allowed, but not monitored. Riskier areas.
+Underground Passages: None. No significant underground passages exist beneath the city.
+Population Density: Populous. A moderate number of people reside in the city. The streets are populated, but not crowded.
+Demographics: 50% Primary Race + 25% Secondary Race + 15% tertiary Race + 10% Other Races
+Population Wealth: Prosperous. The majority enjoy a good standard of living, with some living comfortably.
+Visitor Traffic: Crowds. Noticeable number of visitors, increasing congestion.
+Disposition: Friendly: Locals are Welcoming within the bounds of their rules (Cityfolk are Happy or Content)
+Night Activity: Slow - Almost everything closed except taverns open till early morning, inns open perpetually. Gate is Closed but guards will open it if needed.
+Leadership: Underworld or Criminal Enterprise
+Law Enforcement: None. Without a significant law enforcement presence, crime can easily flourish, leading to lawlessness and disorder.
+General Crime: Dangerous. High levels of crime plague the streets, with frequent incidents of vandalism, muggings, and violence. Organized crime is prevalent.
+Organised Crime: Talk. Most believe in the existence of organized crime, which operates quietly yet ambitiously, often with ties to government officials.
+
+Districts Information:
+District Details:
+ - Type: Scholar. This district has a focus on education and the pursuit of knowledge.
+ - Condition: Magnificent. Incredible cleanliness, maintenance, and structural integrity. Attention to detail is evident throughout the city.
+ - Entry Accessibility: Open. Entrance to the district is unrestricted.
+ - Crime Level: Dangerous. High levels of crime plague the streets, with frequent incidents of vandalism, muggings, and violence. Organized crime is prevalent.
+ - Housing: None
+ - Non-Commercial Locations: Archives/Library, Academy/University, Forum, Schoolhouse, Amphitheater, Archives/Library
+ - Shops: Tailor (Of Good quality.), Bank & Exchange (Of Poor quality.)
+ - Services: Hired Help: Scribes and clerks
+ - Religious Establishments: Oratory. A modest building with seating for attendees, appointed with various items or images relating to that which the faith venerates. Worship is of a good Deity. This Deities followers are Subtle. Followers of the faith may be identifiable, but remain very reserved.
+
+District Details:
+ - Type: Industrial. This district has a focus on large-scale production facilities.
+ - Condition: Magnificent. Incredible cleanliness, maintenance, and structural integrity. Attention to detail is evident throughout the city.
+ - Entry Accessibility: Lightly Guarded. The district entrance has a token guard presence.
+ - Crime Level: Dangerous. High levels of crime plague the streets, with frequent incidents of vandalism, muggings, and violence. Organized crime is prevalent.
+ - Housing: Extensive. A significant amount of the district`s buildings are housing for residents.
+ - Non-Commercial Locations: Treasury
+ - Shops: Smithy, Miller, General Store (Of Poor quality.), Wainwright (Of Fine quality.)
+ - Services: Bathhouse
+ - Religious Establishments: None
+
+District Details:
+ - Type: Docks. This district has a focus on all naval and seafaring matters.
+ - Condition: Decent. Passable but not exceptional. Structures may lack aesthetics but are generally functional.
+ - Entry Accessibility: Lightly Guarded. The district entrance has a token guard presence.
+ - Crime Level: Dangerous. High levels of crime plague the streets, with frequent incidents of vandalism, muggings, and violence. Organized crime is prevalent.
+ - Housing: None
+ - Non-Commercial Locations: None
+ - Shops: Shipwright (Sea Vessals), Weaver
+ - Services: House of Leisure, Inn, Tavern, Bathhouse, Doctor/Apothecary, House of Leisure, Bathhouse
+ - Religious Establishments: None
+
+District Details:
+ - Type: Arcane. This district has a focus on magical matters.
+ - Condition: Magnificent. Incredible cleanliness, maintenance, and structural integrity. Attention to detail is evident throughout the city.
+ - Entry Accessibility: Lightly Guarded. The district entrance has a token guard presence.
+ - Crime Level: Dangerous. High levels of crime plague the streets, with frequent incidents of vandalism, muggings, and violence. Organized crime is prevalent.
+ - Housing: Limited: Only a few live here; the district may be predominantly a place of business or functionality, or perhaps people avoid living here for another, less innocent reason.
+ - Non-Commercial Locations: Archives/Library, Academy/University, Schoolhouse
+ - Shops: Magic Shop: Clothing, Magic Shop: Armour, Magic Shop: Miscellaneous & Curiosities (Of Good quality.), General Store (Of Poor quality.)
+ - Services: Hired Help: Magic Mercenaries, House of Leisure
+ - Religious Establishments: None
+
+
+Noteworthy Officials:
+ - Guildmaster. Oversees one of the official (or underground) guilds, or factions, within the city. They are Corrupt. Taking advantage of the position for personal gain..
+ - Master of the Treasury. Responsible for the city’s expenditures and paying contracts and debts. They are Incompetent. Doesn’t truly understand how to execute the position..
+ - Ambassador. Regularly acts as a representative for the city/nation when traveling abroad. They are Corrupt. Taking advantage of the position for personal gain..
+
+Underground Activities: Parties. A guerilla party scene has been emerging within the city, with semi-frequent, secret, invitation-only parties being held at ever-changing locations.

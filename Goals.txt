@@ -1,0 +1,53 @@
+# Goals
+
+This generator aims to create a comprehensive history for TTRPG worlds, inspired by the depth of Dwarf Fortress, within a fantasy setting.
+
+## Features
+
+1. **Continent Generation**
+   - **Adjustable Options:**
+     - Amount of Continents
+     - Custom or Random Names
+     - Climate Variations
+     - Inhabiting Races
+
+2. **Civilisation/Nation Generation**
+   - **Adjustable Options:**
+     - Number of Civilizations
+     - Mixed or Single Race Civilizations
+     - Demographics for Each Civ
+     - Custom or Random Civilization Names
+     - Unique Civ Specialties (Trade, Magic, War, etc.)
+     - Civilization Continent of Origin
+   - **Methods:**
+     - Getters for all attributes
+
+3. **Town/City/Village/Trade Post Generation**
+   - **Based on Nord Games Book**
+   - **Adjustable Options:**
+     - Random Assignment to Civs
+     - Inheritance of Civ Demographics
+     - Custom or Random Settlement Names
+   - **Methods:**
+     - Getters for all attributes
+
+4. **History Generation**
+   - **Adjustable Options:**
+     - Number of Years to Generate
+     - Types of Events (Hostile, Golden Ages, Wars, Political Intrigue, Natural Disasters, Religious Developments, Technological Developments, Artifact Creation/Discovery, Economic Shifts, Migrations)
+     - Event Frequency per Year
+     - Historical Ages (e.g., Age of Myth, Age of Iron)
+   - **Methods:**
+     - Generate History Method
+     - Display History (using Curses API)
+
+5. **Export Each Event to Markdown**
+
+## Additional Notes
+
+- Ensure events are exported in a Markdown format for ease of use and sharing.
+
+## Generator Specifics
+
+- This generator is Written in Python
+    - This project will take advantage of Pythons Classes to create Data structures that can represent the systems involved in Generation

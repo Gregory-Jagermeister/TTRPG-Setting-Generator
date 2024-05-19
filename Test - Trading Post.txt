@@ -1,0 +1,37 @@
+Name: Braverfallow
+Type: Trading Post
+Origin: No Man's Land
+Specialty: Information
+Visitor Traffic: Crowds
+Resident Population: Sparse (some of the places here are empty)
+Demographics: 80% Primary Race + 20% Secondary Race
+Disposition: Open
+Law Enforcement: Sheiff
+Leadership: Single Elected Leader
+Population Wealth: Average
+Crime: Rare
+Shop Number: 14
+Shops:
+1. General Store
+  2. Smithy (Poor)
+  3. Cobbler (Good)
+  4. Cooper (Good)
+  5. Artist (Good)
+  6. Thatcher (Poor)
+  7. Cooper (Good)
+  8. Thatcher (Good)
+  9. Rare Trade Goods (Good)
+  10. Tanner/Taxidermist (Poor)
+  11. Weaver (Good)
+  12. Smithy (Good)
+Service Number: 9
+Services:
+1. Inn
+  2. Tavern
+  3. Barber
+  4. Leisure House
+  5. Leisure House
+  6. Inn
+  7. Bathhouse
+  8. Hired Help - Bows and SLings.Indiviual Person
+  9. Tavern

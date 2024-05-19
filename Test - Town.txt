@@ -1,0 +1,41 @@
+Town: Rave
+Type: Town
+Origin: Rapid. A group of people rapidly created the town in an important location.
+Priority: Religious. Town focuses on substantial temples and places of worship.
+Specialty: Craft. The town is known for its skilled artisans and high-quality handmade goods.
+Age: Ancient
+Size: Medium
+Condition: Poor
+Environment: Underground
+Prosperity: Successful: The town is functional and generates a modest to good amount of coin.
+Market Square: The Market Square is of a Tight size. The rules of running a stall comes in the form of a First Come, First Served - No Fee basis.
+Merchant Overflow: Monitored: Guards patrol occasionally. Areas less maintained, fewer people.
+Fortification: Fortified: Proper Stone/Wood walls surround this Town.
+Population Density: Crowded. The town is filled with jostling throngs. Practically all structures are occupied. Some may even camp outside town. Moving about can be difficult, and bumping into other people is typical in higher traffic areas.
+Population Overflow: A third of the town’s population is outside the town proper.
+Farms and Resources: Farming (Agriculture): Group of Farms that provide food on lands the town control. (x1), Farming (Livestock): Group of Farms that provide livestock on lands the town control. (x1)
+Visitor Traffic: Crowds. A noticeable amount of people come through town on a regular basis. Congestion is increased.
+Night Activity: Active - Inns and taverns open perpetually, some shops and services available.
+Demographics: 20% Primary Race + all other Races in varieties
+Disposition: Neutral: Locals are standoffish showing no emotion but can be made friendly (Townsfolk are Indifferent)
+Leadership: Mayor
+Law Enforcement: Town Watch - Led by an appointed captain and lieutenant, sufficient guards for key points and token patrols.
+Population Wealth: Average. Most of the town’s population have enough to live a modest life. Those without are a minority.
+Crime: Average
+Shops:
+  - General Store. Sells basic supplies, groceries, and various odds and ends. (x2)
+  - Smithy. Sells and crafts metal tools and equipment, including very basic weapons and armor. (x1)
+  - Luxury Furnishings. Procures and sells all manner of home items for fine living, including furniture, art, and other high-quality goods. (x1)
+Services:
+  - Tavern. Provides food and drink. (x2)
+  - Inn. Provides accommodation, as well as a place to have a bath and a decent meal. (x2)
+  - Bathhouse. Provides spaces for bathing. (x1)
+  - Hired Help - Caravan and Mount. Specialists in transportation and journeys to various locations as well as expedition organization and management. (Size: Team. The hired help is a team of individuals who work together.) (x1)
+  - Doctor/Apothecary. Provides medical care. (x2)
+Noteworthy Officials:
+  - Liner. Determines property boundaries. (x1)
+Non-commercial Locations:
+  - Great Temple. An awe-inspiring structure, devoted to that which it venerates. No expense was spared in its construction. It might display such elements as stunning frescos, elaborate stained-glass scenes, and towering, gilded statues. Walking into a great temple is a rare and striking experience for those who do not live near one. Worship is of a neutral Deity. This Deities followers are Unseen. To those outside the following, it is not clear that the group exists. (x1)
+  - Oratory. A modest building with seating for attendees, appointed with various items or images relating to that which the faith venerates. Worship is of a neutral Deity. This Deities followers are Moderate. The pious are confident and unafraid to display their faith openly, but do not encroach upon the wider populus uncalled for. (x1)
+  - Dance Hall. Location for dances and festive events. (x1)
+  - Town Hall. Used for official town business, audiences, and meetings. (x1)

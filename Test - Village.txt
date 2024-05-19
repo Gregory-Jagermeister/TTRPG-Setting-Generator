@@ -1,0 +1,30 @@
+Type: Village
+Name: Ving Pina Hill
+Hardships: 
+- The community is struggling with famine or food shortage. Impact on Village: Terrible
+- Inter-Community Conflict/Violence has broken out. Impact on Village: Small
+- Inter-Community Conflict/Violence has broken out. Impact on Village: Minimal
+- The community is struggling with famine or food shortage. Impact on Village: Small
+
+Specialty: Crop. The village is known for a particularly notable crop. This could mean rare, high-quality, plentiful, or a mix of the three.
+Resource: Logging and Lumber
+Recent History: Wartorn. The village was occupied by military forces, and suffered damages, during wartime in the recent past.
+Population Density: None
+Demographics: No Racial Representation, Ever shifting
+Disposition: Neutral
+Law Enforcement: Sheriff
+Leadership: Single, Elected Leader
+Population Wealth: Average
+Crime: Rare
+Places of Worship: 
+- Oratory. A modest building with seating for attendees, appointed with various items or images relating to that which the faith venerates. Worship is of a neutral Deity. This Deities followers are Quiet. Adherents to the faith are inconspicuous, unless one knows what to look for (perhaps particular gestures, items of clothing, or phrases).
+
+Places of Gathering: 
+- Amphitheater. Outdoor space with a stage andtiered seating.
+
+Locations: 
+- logging camp
+- carpenters workshop
+- Wainwright. Builds carts and wagons.
+
+Village superstition: Giving a knife as a gift will sever a friendship, so they must always be symbolically paid for.
